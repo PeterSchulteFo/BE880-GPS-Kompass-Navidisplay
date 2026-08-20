@@ -70,37 +70,14 @@ passende Waveshare-Variante, PSRAM je nach Board-Ausstattung aktivieren.
 ## Einrichtung
 
 1. Repository klonen bzw. Ordner öffnen.
-2. Im Sketch-Ordner `config.h.example` zu `config.h` kopieren:
-   ```
-   cp config.h.example config.h
-   ```
-3. In `config.h` die eigenen WLAN-Zugangsdaten eintragen:
-   ```cpp
-   const char* WIFI_SSID = "DEIN_WLAN_NAME";
+2. const char* WIFI_SSID = "DEIN_WLAN_NAME";
    const char* WIFI_PASS = "DEIN_WLAN_PASSWORT";
    ```
-   `config.h` ist in `.gitignore` eingetragen und wird **nicht** mit
-   eingecheckt.
 4. Benötigte Bibliotheken installieren (siehe oben).
 5. Sketch auf das ESP32-S3-Touch-LCD-4 Board flashen.
 6. NMEA-Daten stehen danach über USB-Seriell **und** über
    `tcp://<Board-IP>:10110` zur Verfügung (z. B. in OpenCPN als
    Netzwerkverbindung einrichten).
-
-## Projektstruktur
-
-```
-.
-├── ESP32-S3-Touch-LCD-4_BE880_NEW/
-│   ├── ESP32-S3-Touch-LCD-4_BE880_NEW.ino
-│   └── config.h.example
-├── docs/
-│   └── images/
-│       └── pin_definition_esp32-s3-zero.png
-├── .gitignore
-├── LICENSE.md
-└── README.md
-```
 
 ## Status
 
